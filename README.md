@@ -24,7 +24,7 @@ f_p(k) = \displaystyle\sum_{i=0}^{p+1} a_{i}k^{i}.
 k^p = \displaystyle\sum_{i=0}^{p+1} a_{i}k^{i} - \displaystyle\sum_{i=0}^{p+1} a_{i}(k - 1)^{i}
 ```
 
-Раскроем множитель (k-1)^i во второй сумме по формуле бинома Ньютона
+Раскроем множитель $(k-1)^i$ во второй сумме по формуле бинома Ньютона
 ```math
 k^p = \displaystyle\sum_{i=0}^{p+1} a_{i}k^{i} - \displaystyle\sum_{i=0}^{p+1} a_{i} \displaystyle\sum_{j=0}^{i} \binom{i}{j} k^{i-j} (-1)^j
 ```
@@ -36,7 +36,7 @@ k^p = \displaystyle\sum_{i=0}^{p+1} a_{i}k^{i} - \displaystyle\sum_{i=0}^{p+1} a
 $$b_u = a_u - \displaystyle\sum_{m=u}^{p+1} a_m \binom{m}{m-u} (-1)^{m-u}, $$
 что равносильно
 ```math
-b_p =
+b_u =
   \begin{cases}
     0,                                                             & \quad \text{если } u=p+1\\
     -\displaystyle\sum_{m=u+1}^{p+1} a_m \binom{m}{m-u} (-1)^{m-u},& \quad \text{если } 0 \leq u < p+1
