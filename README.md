@@ -13,7 +13,7 @@ f_p(k) = \displaystyle\sum_{i=0}^{p+1} a_{i}k^{i}.
 Тогда 
 ```math
 \displaystyle\sum_{k=1}^{n} k^{p} = \displaystyle\sum_{k=1}^{n} (f_p(k) - f_p(k - 1)) = f_p(n) - f_p(0)
-= \displaystyle\sum_{i=0}^{p+1} a_{i}n^{i} - a_0 = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i} \text{(1)}.
+= \displaystyle\sum_{i=0}^{p+1} a_{i}n^{i} - a_0 = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i}. \text{  (1)}
 ```
 \
 \
