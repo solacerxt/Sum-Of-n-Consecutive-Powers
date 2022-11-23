@@ -39,11 +39,37 @@ $$b_u = a_u - \displaystyle\sum_{m=u}^{p+1} a_m \binom{m}{m-u} (-1)^{m-u}, $$
 b_u =
   \begin{cases}
     0,                                                             & \quad \text{если } u=p+1\\
-    -\displaystyle\sum_{m=u+1}^{p+1} a_m \binom{m}{m-u} (-1)^{m-u},& \quad \text{если } 0 \leq u < p+1
+    -\displaystyle\sum_{m=u+1}^{p+1} a_m \binom{m}{u} (-1)^{m-u},& \quad \text{если } 0 \leq u < p+1
   \end{cases}
 ```
 Т.к. выражение коэффициента $b_u$ состоит из всех $a_i : u+1 \leq i \leq p + 1$, то мы можем вычислить все $a_i$ для $1 \leq i \leq p+1$ (вспомним, что $a_0$ в формуле *(1)* нам не нужен):
-* $a_{p+1}$:<br>
-  Поскольку $b_p = -a_{p+1} \binom{p+1}{1} (-1)^1 = (p+1) a_{p+1}$ и $b_p = 1$, то $a_{p+1} = \frac{1}{p+1}$.
-* $a_{i} : i \neq p+1$:<br>
-...
+* $a_{p+1}$ :<br>
+```math
+\begin{cases}
+  b_p = -a_{p+1} \binom{p+1}{p} (-1)^1,\\
+  b_p = 1
+\end{cases}
+\Rightarrow
+a_{p+1} (p+1) = 1
+\Leftrightarrow
+a_{p+1} = \frac{1}{p+1}.
+```
+* $a_{i} : 1 \leq i \leq p$ :<br>
+```math
+\begin{cases}
+  b_{i-1} = -\displaystyle\sum_{m=i}^{p+1} a_m \binom{m}{i-1} (-1)^{m-i+1},\\
+  b_{i-1} = 0
+\end{cases}
+\Rightarrow
+\displaystyle\sum_{m=i}^{p+1} a_m \binom{m}{i-1} (-1)^{m-i+1} = 0
+\Leftrightarrow
+```
+```math
+\Leftrightarrow
+a_i \binom{i}{i-1} (-1)^{i-i+1} + \displaystyle\sum_{m=i+1}^{p+1} a_m \binom{m}{i-1} (-1)^{m-i+1} = 0
+\Leftrightarrow
+```
+```math
+\Leftrightarrow
+a_i = \frac{1}{i} \displaystyle\sum_{m=i+1}^{p+1} a_m \binom{m}{i-1} (-1)^{m-i+1}.
+```
