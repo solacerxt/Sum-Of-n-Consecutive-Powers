@@ -1,13 +1,13 @@
 # Sum-Of-n-Consecutive-Powers
 
-Given integers $n \geq 1$, $p \geq 0$. Find a sequence of rational numbers $a[1..p+1]$ such that
+Given integers $n \geq 1$, $p \geq 0$. Suppose we have found a sequence of rational numbers $a[1..p+1]$ such that
 
 ```math
 \displaystyle\sum_{k=1}^{n} k^{p} = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i}
 ```
 Then we can calculate the sum of $n$ consecutive powers in $O(p)$.
 
-## Algorithm
+## Algorithm finding a[1..p+1]
 
 ```csharp
 var a = new Fraction64[p + 2];
