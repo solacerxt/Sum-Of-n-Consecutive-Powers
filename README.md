@@ -21,7 +21,7 @@ for (var i = 0; i < p + 2; ++i)
         binom[i, j] = binom[i - 1, j] + binom[i - 1, j - 1];
 }
 
-a[p + 1] = (1, p + 1);
+a[p + 1] = (1, p + 1); // (numerator, denominator)
 
 for (var i = p; i > 0; --i)
 {
