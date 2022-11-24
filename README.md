@@ -1,7 +1,5 @@
 # Sum-Of-n-Consecutive-Powers
 
-# Sum-Of-n-Consecutive-Powers
-
 ```csharp
 //Given integer p >= 0
 
