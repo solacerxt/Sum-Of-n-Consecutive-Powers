@@ -1,7 +1,4 @@
 # Sum-Of-n-Consecutive-Powers
-```math
-\displaystyle\sum_{k=1}^{n} k^{p} = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i}
-```
 
 ```csharp
 //Given integer p >= 0
@@ -34,6 +31,9 @@ for (var i = p; i > 0; --i)
 
 //Answer: a[1..p+1]
 
+```
+```math
+\displaystyle\sum_{k=1}^{n} k^{p} = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i}
 ```
 Complexity: Time – $O(p^2)$, Memory – $O(p^2)$.
 
