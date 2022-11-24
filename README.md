@@ -33,7 +33,7 @@ for (var i = p; i > 0; --i)
         sign *= -1;
     }
 
-    a[i] *= (1, i);
+    a[i] /= i;
 }
 
 //Answer: a[1..p+1]
