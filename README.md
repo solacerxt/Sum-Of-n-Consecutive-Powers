@@ -9,8 +9,6 @@ Given integers $n \geq 1$, $p \geq 0$. Find a sequence of rational numbers $a[1.
 ## Algorithm
 
 ```csharp
-//Given integer p >= 0
-
 var a = new Fraction64[p + 2];
 var binom = new long[p + 2, p + 2];
 
