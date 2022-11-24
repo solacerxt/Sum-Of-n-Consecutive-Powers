@@ -1,7 +1,43 @@
 # Sum-Of-n-Consecutive-Powers
 
-...\
-\
+# Sum-Of-n-Consecutive-Powers
+
+```csharp
+//Given integer p >= 0
+
+var a = new Fraction64[p + 2];
+var binom = new long[p + 2, p + 2];
+
+for (var i = 0; i < p + 2; ++i)
+{
+    binom[i, 0] = binom[i, i] = 1;
+    
+    for (var j = 1; j < i; ++j)
+        binom[i, j] = binom[i - 1, j] + binom[i - 1, j - 1];
+}
+
+a[p + 1] = (1, p + 1);
+
+for (var i = p; i > 0; --i)
+{
+    a[i] = (0, 1);
+    var sign = 1;
+    for (var m = i + 1; m <= p + 1; ++m)
+    {
+        a[i] += sign * binom[m, i - 1] * a[m]; // overloaded operators * and + with division by GCD
+        sign *= -1;
+    }
+
+    a[i] *= (1, i);
+}
+
+//Answer: a[1..p+1]
+
+```
+Complexity: Time – $O(p^2)$, Memory – $O(p^2)$.
+
+## Proof (in Russian)
+
 Пусть у нас есть последовательность рациональных чисел $a = (a_0, \ldots, a_{p+1})$ такая, что значение k-го слагаемого можно представить как разность:
 
 ```math 
