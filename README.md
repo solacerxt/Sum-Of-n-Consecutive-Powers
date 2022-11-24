@@ -5,7 +5,7 @@ Given integers $n \geq 1$, $p \geq 0$. Find a sequence of rational numbers $a[1.
 ```math
 \displaystyle\sum_{k=1}^{n} k^{p} = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i}
 ```
-Then we can calculate the sum of $n$ consecutive powers of $p$ in $O(p)$.
+Then we can calculate the sum of $n$ consecutive powers in $O(p)$.
 
 ## Algorithm
 
