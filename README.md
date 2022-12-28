@@ -1,6 +1,6 @@
 # Sum-Of-n-Consecutive-Powers
 
-Given integers $n \geq 1$, $p \geq 0$. Suppose we have found a sequence of rational numbers $a = (a_1, \ldots, a_{p+1})$ such that
+Given integers $n \geq 1$, $p \geq 0$. Suppose we have found a sequence of rational numbers $a = \langle a_1, \ldots, a_{p+1} \rangle$ such that
 
 ```math
 \displaystyle\sum_{k=1}^{n} k^{p} = \displaystyle\sum_{i=1}^{p+1} a_{i}n^{i}
@@ -43,7 +43,7 @@ Complexity: Time – $O(p^2)$, Memory – $O(p^2)$.
 
 ## Proof (in Russian)
 
-Пусть у нас есть последовательность рациональных чисел $a = (a_0, \ldots, a_{p+1})$ такая, что значение k-го слагаемого можно представить как разность:
+Пусть у нас есть последовательность рациональных чисел $a = \langle a_0, \ldots, a_{p+1} \rangle$ такая, что значение k-го слагаемого можно представить как разность:
 
 ```math 
 k^p = f_p(k) - f_p(k - 1),  \text{ (*)}
